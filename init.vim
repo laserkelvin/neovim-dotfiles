@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -39,6 +39,10 @@ Plugin 'nightsense/carbonized'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" Pandoc integration
+" Plugin 'vim-pandoc/vim-pandoc'
+" Plugin 'vim-pandoc/vim-pandoc-syntax'
+
 " Surrounding brackets
 Plugin 'tpope/vim-surround'
 
@@ -46,6 +50,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'lervag/vimtex'
 Plugin 'vim-latex/vim-latex'
 Plugin 'donRaphaco/neotex'
+
+" Writing focus tools
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
+
+" Integration with PyWal
+Plugin 'dylanaraps/wal'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -87,3 +98,9 @@ set sw=2
 " type in \ref{fig: and press <C-n> you will automatically cycle through
 " all the figure labels. Very useful!
 set iskeyword+=:
+
+" Integrate Limelight with Goyo
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+colorscheme wal
