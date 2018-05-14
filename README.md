@@ -15,6 +15,7 @@ The highlights are:
 5. Integration with Pandoc with `vim-pandoc` and `vim-pandoc-syntax`
 6. Color scheme integration with PyWal
 7. `syntastic` for syntax highlighting
+8. Markdown tables with `vim-table-mode`
 
 ## Installation
 

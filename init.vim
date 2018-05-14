@@ -38,6 +38,7 @@ Plugin 'nightsense/carbonized'
 " Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'dhruvasagar/vim-table-mode'
 
 " Pandoc integration
 " Plugin 'vim-pandoc/vim-pandoc'
