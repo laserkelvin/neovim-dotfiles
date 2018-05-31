@@ -25,7 +25,18 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 " Syntastic Plugin
-Plugin 'scrooloose/syntastic'
+" Currently in a hate relationship with Syntastic because I'm bad
+" Maybe one day I'll go back to it
+"Plugin 'scrooloose/syntastic'
+
+" Commenting
+Plugin 'scrooloose/nerdcommenter'
+
+" Autocompletion
+" Async autocompletion
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Completion from other opened files
+Plugin 'Shougo/context_filetype.vim'
 
 " Airline Tab
 Plugin 'vim-airline/vim-airline'
@@ -40,9 +51,23 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'dhruvasagar/vim-table-mode'
 
-" Pandoc integration
-" Plugin 'vim-pandoc/vim-pandoc'
-" Plugin 'vim-pandoc/vim-pandoc-syntax'
+" Python integration
+Plugin 'zchee/deoplete-jedi'
+" Just to add the python go-to-definition and similar features, autocompletion
+" from this plugin is disabled
+Plugin 'davidhalter/jedi-vim'
+" Automatically sort python imports
+Plugin 'fisadev/vim-isort'
+
+" CSS integration
+" Paint css colors with the real color
+Plugin 'lilydjwg/colorizer'
+
+" HTML integration
+" Highlight matching html tags
+Plugin 'valloric/MatchTagAlways'
+" Generate html in a simple way
+Plugin 'mattn/emmet-vim'
 
 " Surrounding brackets
 Plugin 'tpope/vim-surround'
@@ -75,15 +100,55 @@ filetype indent on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" Syntastic Configuarion
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" General Neovim configuration
+" Indentation
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+" Line numbers
+set nu
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+" Airline Tab config
+let g:airline_powerline_fonts = 0
+let g:airline_theme = 'bubblegum'
+let g:airline#extensions#whitespace#enabled = 0
+
+" Deoplete -----------------------------
+
+" Use deoplete.
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
+let g:deoplete#enable_smart_case = 1
+" complete with words from any opened file
+let g:context_filetype#same_filetypes = {}
+let g:context_filetype#same_filetypes._ = '_'
+
+" Jedi-vim ------------------------------
+
+" Disable autocompletion (using deoplete instead)
+let g:jedi#completions_enabled = 0
+
+" All these mappings work only for python code:
+" Go to definition
+let g:jedi#goto_command = ',d'
+" Find ocurrences
+let g:jedi#usages_command = ',o'
+" Find assignments
+let g:jedi#goto_assignments_command = ',a'
+" Go to definition in new tab
+nmap ,D :tab split<CR>:call jedi#goto()<CR>
+
+" Syntastic Configuration
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" 
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
 
 " Markdown Configuration
 let g:vim_markdown_folding_style_pythonic = 1
