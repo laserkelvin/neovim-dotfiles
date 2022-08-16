@@ -1,172 +1,155 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin()
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" Any valid git URL is allowed
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
-" Syntastic Plugin
-" Currently in a hate relationship with Syntastic because I'm bad
-" Maybe one day I'll go back to it
-"Plugin 'scrooloose/syntastic'
+" NerdTree
+Plug 'preservim/nerdtree'
 
-" Commenting
-Plugin 'scrooloose/nerdcommenter'
+" nerdtree-git-plugin - show git status in NERD Tree
+" https://github.com/Xuyuanp/nerdtree-git-plugin
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Autocompletion
-" Async autocompletion
-Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Completion from other opened files
-Plugin 'Shougo/context_filetype.vim'
+" Telescope stuff
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
-" Airline Tab
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Git stuff
+Plug 'tpope/vim-fugitive'
 
-" vim-colorschemes
-Plugin 'flazz/vim-colorschemes'
-Plugin 'nightsense/carbonized'
+" Visual stuff
+" vim-airline
+" Enhanced statusline
+" https://github.com/vim-airline/vim-airline
+Plug 'vim-airline/vim-airline'
+" https://github.com/vim-airline/vim-airline-themes
+Plug 'vim-airline/vim-airline-themes'
+" Notification lol
+Plug 'rcarriga/nvim-notify'
+" Theme
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
-" Markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'dhruvasagar/vim-table-mode'
+" for tab management
+Plug 'romgrk/barbar.nvim'
 
-" Python integration
-Plugin 'zchee/deoplete-jedi'
-" Just to add the python go-to-definition and similar features, autocompletion
-" from this plugin is disabled
-Plugin 'davidhalter/jedi-vim'
-" Automatically sort python imports
-Plugin 'fisadev/vim-isort'
+" Markdown plugins
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'elzr/vim-json'
 
-" CSS integration
-" Paint css colors with the real color
-Plugin 'lilydjwg/colorizer'
+" Autocompletion stuff
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Python autocompletion
+Plug 'zchee/deoplete-jedi'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdcommenter'
+" Run black on save to format code
+Plug 'sbdchd/neoformat'
+" Pylint for static code checking
+Plug 'neomake/neomake'
 
-" HTML integration
-" Highlight matching html tags
-Plugin 'valloric/MatchTagAlways'
-" Generate html in a simple way
-Plugin 'mattn/emmet-vim'
+" Initialize plugin system
+call plug#end()
 
-" Surrounding brackets
-Plugin 'tpope/vim-surround'
-
-" LaTeX
-Plugin 'lervag/vimtex'
-Plugin 'vim-latex/vim-latex'
-Plugin 'donRaphaco/neotex'
-
-" Writing focus tools
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
-
-" Integration with PyWal
-Plugin 'dylanaraps/wal'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-"filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-filetype plugin on
-filetype indent on
+" Base nvim configurations
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+set number
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+" configurations
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" NerdTree bindings
+nnoremap <C-e> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 
-" General Neovim configuration
-" Indentation
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-" Line numbers
-set nu
-
-" Airline Tab config
-let g:airline_powerline_fonts = 0
-let g:airline_theme = 'bubblegum'
-let g:airline#extensions#whitespace#enabled = 0
-
-" Deoplete -----------------------------
-
-" Use deoplete.
+nnoremap <C-f> :Files<CR>
 
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 1
-let g:deoplete#enable_smart_case = 1
-" complete with words from any opened file
-let g:context_filetype#same_filetypes = {}
-let g:context_filetype#same_filetypes._ = '_'
 
-" Jedi-vim ------------------------------
+let g:python3_host_prog = '/scratch/users/kinlongk/miniconda3/bin/python'
 
-" Disable autocompletion (using deoplete instead)
-let g:jedi#completions_enabled = 0
+" Theme stuff
+let g:airline_theme = 'deus'
 
-" All these mappings work only for python code:
-" Go to definition
-let g:jedi#goto_command = ',d'
-" Find ocurrences
-let g:jedi#usages_command = ',o'
-" Find assignments
-let g:jedi#goto_assignments_command = ',a'
-" Go to definition in new tab
-nmap ,D :tab split<CR>:call jedi#goto()<CR>
+" NOTE: If barbar's option dict isn't created yet, create it
+let bufferline = get(g:, 'bufferline', {})
+" disable icons for barbar
+let bufferline.icons = v:false
 
-" Syntastic Configuration
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" 
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_check_on_wq = 0
+" Python pipeline stuff
+" Configure black format on save for Python
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat python black
+augroup END
 
-" Markdown Configuration
-let g:vim_markdown_folding_style_pythonic = 1
-let g:vim_markdown_math = 1
-let g:vim_markdown_frontmatter = 1
 
-" LaTeX configuration
-let g:tex_flavor='latex'
-" this is mostly a matter of taste. but LaTeX looks good with just a bit
-" of indentation.
-set sw=2
-" TIP: if you write your \label's as \label{fig:something}, then if you
-" type in \ref{fig: and press <C-n> you will automatically cycle through
-" all the figure labels. Very useful!
-set iskeyword+=:
+" Use Pylint for static checking
+let g:neomake_python_enabled_makers = ['pylint']
 
-" Integrate Limelight with Goyo
+colorscheme tokyonight
+
+" bindings for barbar
+" Move to previous/next
+nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
+nnoremap <silent>    <A-.> <Cmd>BufferNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <A-<> <Cmd>BufferMovePrevious<CR>
+nnoremap <silent>    <A->> <Cmd>BufferMoveNext<CR>
+" Goto buffer in position...
+nnoremap <silent>    <A-1> <Cmd>BufferGoto 1<CR>
+nnoremap <silent>    <A-2> <Cmd>BufferGoto 2<CR>
+nnoremap <silent>    <A-3> <Cmd>BufferGoto 3<CR>
+nnoremap <silent>    <A-4> <Cmd>BufferGoto 4<CR>
+nnoremap <silent>    <A-5> <Cmd>BufferGoto 5<CR>
+nnoremap <silent>    <A-6> <Cmd>BufferGoto 6<CR>
+nnoremap <silent>    <A-7> <Cmd>BufferGoto 7<CR>
+nnoremap <silent>    <A-8> <Cmd>BufferGoto 8<CR>
+nnoremap <silent>    <A-9> <Cmd>BufferGoto 9<CR>
+nnoremap <silent>    <A-0> <Cmd>BufferLast<CR>
+" Pin/unpin buffer
+nnoremap <silent>    <A-p> <Cmd>BufferPin<CR>
+" Close buffer
+nnoremap <silent>    <A-c> <Cmd>BufferClose<CR>
+" Wipeout buffer
+"                          :BufferWipeout
+" Close commands
+"                          :BufferCloseAllButCurrent
+"                          :BufferCloseAllButPinned
+"                          :BufferCloseAllButCurrentOrPinned
+"                          :BufferCloseBuffersLeft
+"                          :BufferCloseBuffersRight
+" Magic buffer-picking mode
+nnoremap <silent> <C-p>    <Cmd>BufferPick<CR>
+" Sort automatically by...
+nnoremap <silent> <Space>bb <Cmd>BufferOrderByBufferNumber<CR>
+nnoremap <silent> <Space>bd <Cmd>BufferOrderByDirectory<CR>
+nnoremap <silent> <Space>bl <Cmd>BufferOrderByLanguage<CR>
+nnoremap <silent> <Space>bw <Cmd>BufferOrderByWindowNumber<CR>
+
+" Distraction free Goyo pairing with Limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-colorscheme wal
+" disable header folding
+let g:vim_markdown_folding_disabled = 1
+
+" do not use conceal feature, the implementation is not so good
+let g:vim_markdown_conceal = 0
+
+" disable math tex conceal feature
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+
+" support front matter of various format
+let g:vim_markdown_frontmatter = 1  " for YAML format
+let g:vim_markdown_toml_frontmatter = 1  " for TOML format
+let g:vim_markdown_json_frontmatter = 1  " for JSON format
