@@ -22,7 +22,7 @@ Plug 'tpope/vim-fugitive'
 
 -- Visual, syntax highlighting
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = 'TSUpdate'})
-Plug('folke/tokyonight.nvim', { 'branch' = 'main' })
+Plug('folke/tokyonight.nvim', {['branch'] = 'main'})
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rcarriga/nvim-notify'
@@ -36,8 +36,8 @@ Plug 'junegunn/limelight.vim'
 Plug 'elzr/vim-json'
 
 -- Language server, code completion, formatting
-Plug('neoclide/coc.nvim', {'branch' = 'release'})
-Plug('pappasam/coc-jedi', { ['do'] = 'yarn install --frozen-lockfile && yarn build', 'branch' =  'main' })
+Plug('neoclide/coc.nvim', {['branch'] = 'release'})
+Plug('pappasam/coc-jedi', {['do'] = 'yarn install --frozen-lockfile && yarn build', ['branch'] =  'main'})
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
