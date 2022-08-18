@@ -3,7 +3,7 @@ lua require('bindings')
 lua require('languages')
 lua require('theme')
 lua require('autocmd')
-lua require('lualine').setup()
+lua require('plugins.lualine')
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
