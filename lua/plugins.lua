@@ -42,5 +42,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
+Plug 'kylechui/nvim-surround'
 
 vim.call('plug#end')

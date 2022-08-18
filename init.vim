@@ -19,8 +19,6 @@ augroup fmt
   autocmd BufWritePre * undojoin | Neoformat python black
 augroup END
 
-colorscheme tokyonight
-
 " Distraction free Goyo pairing with Limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
