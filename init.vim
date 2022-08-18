@@ -1,21 +1,13 @@
 lua require('plugins')
+lua require('bindings')
+lua require('languages')
+lua require('theme')
+lua require('autocmd')
 " Base nvim configurations
 "
 set number
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-" configurations
-"
-" NerdTree bindings
-nnoremap <C-e> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
 
-nnoremap <C-f> :Files<CR>
-
-let g:python3_host_prog = '$HOME/miniconda3/envs/system/bin/python'
-
-" Theme stuff
-let g:airline_theme = 'deus'
 
 " NOTE: If barbar's option dict isn't created yet, create it
 let bufferline = get(g:, 'bufferline', {})
