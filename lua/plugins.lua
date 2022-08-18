@@ -23,10 +23,10 @@ Plug 'tpope/vim-fugitive'
 -- Visual, syntax highlighting
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = 'TSUpdate'})
 Plug('folke/tokyonight.nvim', {['branch'] = 'main'})
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'rcarriga/nvim-notify'
 Plug 'romgrk/barbar.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 
 -- Language specific stuff; Markdown
 Plug 'godlygeek/tabular'
