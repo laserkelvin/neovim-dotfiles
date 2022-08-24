@@ -43,5 +43,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
 Plug 'kylechui/nvim-surround'
+Plug('kkoomen/vim-doge', {['do'] = 'npm i --no-save && npm run build:binary:unix' })
 
 vim.call('plug#end')

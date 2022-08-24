@@ -4,8 +4,11 @@ lua require('languages')
 lua require('theme')
 lua require('autocmd')
 lua require('plugins.lualine')
+lua require('plugins.doge')
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+let g:python3_host_prog = '/home/kinlongk/miniconda3/envs/system/bin/python3'
 
 
 " NOTE: If barbar's option dict isn't created yet, create it
