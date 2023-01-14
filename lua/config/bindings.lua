@@ -9,6 +9,9 @@ map.set("n", "<leader>fh", builtin.help_tags, {})
 
 map.set("n", "<space>fb", ":Telescope file_browser", { noremap = true})
 
+-- Fugitive bindings
+map.set("n", "<leader>gg", ":Git")
+
 -- barbar; too lazy to port this to lua lol
 vim.cmd [[
 	nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
