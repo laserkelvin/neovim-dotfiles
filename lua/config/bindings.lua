@@ -1,13 +1,13 @@
 
 local map = vim.keymap
+local builtin = require("telescope.builtin")
 
--- NERDTree bindings
-map.set('n', '<C-e>', ':NERDTreeFocus<CR>')
-map.set('n', '<C-n>', ':NERDTree<CR>')
-map.set('n', '<C-t>', ':NERDTreeToggle<CR>')
+-- Telescope bindings
+map.set("n", "<leader>ff", builtin.find_files, {})
+map.set("n", "<leader>fb", builtin.buffers, {})
+map.set("n", "<leader>fh", builtin.help_tags, {})
 
--- fzf
-map.set('n', '<C-f>', ':Files<CR>')
+map.set("n", "<space>fb", ":Telescope file_browser", { noremap = true})
 
 -- barbar; too lazy to port this to lua lol
 vim.cmd [[
