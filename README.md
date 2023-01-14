@@ -47,6 +47,12 @@ run `CocInstall coc-jedi` - it works if you do.
 
 ## Usage
 
+### Navigation
+
+- Open files in new buffers with Telescope: in command mode, `<space>fb`
+- Close buffers with `:bd`
+- Navigate between buffers with `<A-,>` and `<A-.>` (alt-key)
+
 ### Fugitive
 
 - Get in the habit of using Fugitive for `git` actions:
