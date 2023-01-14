@@ -45,3 +45,12 @@ While `coc-jedi` is included in `init.vim`, I'm not sure if you need to still
 run `CocInstall coc-jedi` - it works if you do.
 
 
+## Usage
+
+### Fugitive
+
+- Get in the habit of using Fugitive for `git` actions:
+	- `:Git` without other commands will open a buffer with modified files
+	- You can cycle through modified files with `(` and `)`
+	- Pressing `=` on a modified file will expand it, showing diffs
+	- Pressing `-` on a diff will add the patch
