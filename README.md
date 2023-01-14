@@ -3,20 +3,23 @@
 ## Plugins for writing and coding
 
 This is a small dotfile collection for writing and coding in NeoVim. Packages
-are managed using [`vim-plugin`](https://github.com/junegunn/vim-plug), which
+are managed using [`lazy.nvim`](https://github.com/folke/lazy.nvim), which
 is required before these plugins can be used.
 
 The highlights are:
 
 1. `coc-jedi` for autocompletion, with `coc.nvim` as a language server
-2. `NERDTree` for file navigation
-3. `fzf` for fuzzy file finding
-4. `fugitive` for Git control within Neovim
-5. `barbar` for buffer management
-6. `Goyo` and `Limelight` for distraction-free writing
+2. `telescope` for a lot of things
+3. `fugitive` for Git control within Neovim
+4. `barbar` for buffer management
+5. `Goyo` and `Limelight` for distraction-free writing
 
 
 ## Installation
+
+These dotfiles depend on Lazy.nvim, which in turn as of the latest commit, needs
+`nvim>=0.8.0`. The easiest way to setup is grab a binary from the repository and
+add it to `PATH`.
 
 Some of the plugins in the config require external packages: `jedi` and
 `deoplete`, for example, need Python 3. I generally use Anaconda with Python 3,
@@ -26,7 +29,9 @@ and the following commands work for me:
 pip install neovim pep8 flake8 pyflakes pylint isort black
 ```
 
-Afterwards, just run `:PlugInstall` in a NeoVim session.
+The nice thing about Lazy.nvim, apart from being very fast, is that the plugin
+management is very automated. `lua/plugins/*.lua` correspond to categories of
+plugins, and more or less can be easily configured based on what's there already.
 
 ### `coc.nvim`
 
