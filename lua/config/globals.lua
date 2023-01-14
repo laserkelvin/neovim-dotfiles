@@ -1,6 +1,4 @@
 
-vim.g.python3_host_prog = '/home/kinlongk/miniconda3/envs/system/bin/python'
-
 vim.opt.number = true
 
 -- stuff for coc compatibility
