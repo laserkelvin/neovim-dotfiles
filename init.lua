@@ -38,3 +38,4 @@ require("lazy").setup(
 
 require("config/telescope")
 require("config/theme")
+require("config/bindings")
