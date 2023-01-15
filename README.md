@@ -59,6 +59,7 @@ is said and done.
 - Open files in new buffers with Telescope: in command mode, `<space>fb`
 - Close buffers with `:bd`
 - Navigate between buffers with `<A-,>` and `<A-.>` (alt-key)
+- Open Telescope with `<leader>ts` to access various functions
 
 ### Fugitive
 
