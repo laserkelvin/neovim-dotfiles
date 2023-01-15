@@ -23,6 +23,9 @@ map.set("n", "gy", "<Plug>(coc-type-definition)", { silent = true})
 map.set("n", "gi", "<Plug>(coc-implementation)", { silent = true})
 map.set("n", "gr", "<Plug>(coc-references)", { silent = true})
 
+map.set("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true})
+map.set("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true})
+
 -- barbar; too lazy to port this to lua lol
 vim.cmd [[
 	nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
