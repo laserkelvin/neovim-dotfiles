@@ -72,3 +72,12 @@ is said and done.
 	- You can cycle through modified files with `(` and `)`
 	- Pressing `=` on a modified file will expand it, showing diffs
 	- Pressing `-` on a diff will add the patch
+
+### Bindings
+
+TODO see if we can port this into something more easily searchable.
+
+- `<space>tb` for `:Telescope file_browser`
+- `<space>tf` for `:Telescope frecency`
+- `<leader>ga` for `:Git add .`
+- `<leader>gc>` for `:Git commit`
