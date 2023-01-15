@@ -41,8 +41,9 @@ You will need to first install node JS; from the `coc.nvim` instructions, run:
 curl -sL install-node.vercel.app/lts | bash
 ```
 
-While `coc-jedi` is included in `init.vim`, I'm not sure if you need to still
-run `CocInstall coc-jedi` - it works if you do.
+The suite now uses `coc-pyright`; as `lazy.nvim` installs packages it will install `pyright`
+with `npm`. Additionally, run `:CocInstall coc-pyright` within neovim after everything else
+is said and done.
 
 
 ## Usage
