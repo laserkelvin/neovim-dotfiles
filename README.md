@@ -41,11 +41,15 @@ plugins, and more or less can be easily configured based on what's there already
 
 ### `coc.nvim`
 
-You will need to first install node JS; from the `coc.nvim` instructions, run:
+You will need to first install node JS; the recommended way is to install Node Version Manager
+(`nvm`), which simplifies getting node.JS and `npm`.
 
 ```bash
-curl -sL install-node.vercel.app/lts | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
+
+This will append to `.bashrc`, and so either source or relogin. Afterwards, run `nvm install --lts`
+to get the latest LTS version of `npm`.
 
 The suite now uses `coc-pyright`; as `lazy.nvim` installs packages it will install `pyright`
 with `npm`. Additionally, run `:CocInstall coc-pyright` within neovim after everything else
