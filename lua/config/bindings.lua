@@ -17,6 +17,12 @@ map.set("n", "<leader>gg", ":Git<enter>")
 map.set("n", "<leader>ga", ":Git add .")
 map.set("n", "<leader>gc", ":Git commit") 
 
+-- Coc bindings
+map.set("n", "gd", "<Plug>(coc-definition)", { silent = true})
+map.set("n", "gy", "<Plug>(coc-type-definition)", { silent = true})
+map.set("n", "gi", "<Plug>(coc-implementation)", { silent = true})
+map.set("n", "gr", "<Plug>(coc-references)", { silent = true})
+
 -- barbar; too lazy to port this to lua lol
 vim.cmd [[
 	nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
