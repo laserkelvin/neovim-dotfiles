@@ -8,7 +8,9 @@ map.set("n", "<leader>fb", builtin.buffers, {})
 map.set("n", "<leader>fh", builtin.help_tags, {})
 map.set("n", "<leader>ts", ":Telescope", {})
 
-map.set("n", "<space>fb", ":Telescope file_browser", { noremap = true})
+-- Telescope extension bindings
+map.set("n", "<space>tb", ":Telescope file_browser", { noremap = true})
+map.set("n", "<space>tf", ":Telescope frecency", { noremap = true})
 
 -- Fugitive bindings
 map.set("n", "<leader>gg", ":Git")
