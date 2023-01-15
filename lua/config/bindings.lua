@@ -6,14 +6,14 @@ local builtin = require("telescope.builtin")
 map.set("n", "<leader>ff", builtin.find_files, {})
 map.set("n", "<leader>fb", builtin.buffers, {})
 map.set("n", "<leader>fh", builtin.help_tags, {})
-map.set("n", "<leader>ts", ":Telescope", {})
+map.set("n", "<leader>ts", ":Telescope<enter>", {})
 
 -- Telescope extension bindings
-map.set("n", "<space>tb", ":Telescope file_browser", { noremap = true})
-map.set("n", "<space>tf", ":Telescope frecency", { noremap = true})
+map.set("n", "<space>tb", ":Telescope file_browser<enter>", { noremap = true})
+map.set("n", "<space>tf", ":Telescope frecency<enter>", { noremap = true})
 
 -- Fugitive bindings
-map.set("n", "<leader>gg", ":Git")
+map.set("n", "<leader>gg", ":Git<enter>")
 map.set("n", "<leader>ga", ":Git add .")
 map.set("n", "<leader>gc", ":Git commit") 
 
