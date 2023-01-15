@@ -14,6 +14,8 @@ map.set("n", "<space>tf", ":Telescope frecency", { noremap = true})
 
 -- Fugitive bindings
 map.set("n", "<leader>gg", ":Git")
+map.set("n", "<leader>ga", ":Git add .")
+map.set("n", "<leader>gc", ":Git commit") 
 
 -- barbar; too lazy to port this to lua lol
 vim.cmd [[
