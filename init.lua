@@ -36,6 +36,10 @@ require("lazy").setup(
 	},
 })
 
-require("config/telescope")
-require("config/theme")
-require("config/bindings")
+require("config.bindings")
+require("config.languages")
+require("config.theme")
+require("config.globals")
+require("config.doge")
+require("config.telescope")
+require("config.autocmd")

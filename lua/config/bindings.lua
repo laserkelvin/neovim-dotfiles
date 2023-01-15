@@ -6,6 +6,7 @@ local builtin = require("telescope.builtin")
 map.set("n", "<leader>ff", builtin.find_files, {})
 map.set("n", "<leader>fb", builtin.buffers, {})
 map.set("n", "<leader>fh", builtin.help_tags, {})
+map.set("n", "<leader>ts", ":Telescope", {})
 
 map.set("n", "<space>fb", ":Telescope file_browser", { noremap = true})
 
