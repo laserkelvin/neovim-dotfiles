@@ -21,13 +21,19 @@ These dotfiles depend on Lazy.nvim, which in turn as of the latest commit, needs
 `nvim>=0.8.0`. The easiest way to setup is grab a binary from the repository and
 add it to `PATH`.
 
-Some of the plugins in the config require external packages: `jedi` and
-`deoplete`, for example, need Python 3. I generally use Anaconda with Python 3,
-and the following commands work for me:
+### Dependencies
 
-```bash
-pip install neovim pep8 flake8 pyflakes pylint isort black
-```
+- `npm` (see below in `coc.nvim`), and install the following with `npm` too:
+	- `pyright`
+	- `neovim`
+
+Additional PyPI packages which are supported, but generally better left for `pre-commit`
+workflows:
+
+- `neovim`
+- `pylint`
+- `isort`
+- `black`
 
 The nice thing about Lazy.nvim, apart from being very fast, is that the plugin
 management is very automated. `lua/plugins/*.lua` correspond to categories of
