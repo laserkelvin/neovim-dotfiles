@@ -7,6 +7,7 @@ map.set("n", "<leader>ff", builtin.find_files, {})
 map.set("n", "<leader>fb", builtin.buffers, {})
 map.set("n", "<leader>fh", builtin.help_tags, {})
 map.set("n", "<leader>ts", ":Telescope<CR>", {})
+map.set("n", "<leader>tk", ":Telescope keymap<CR>", {})
 
 -- Telescope extension bindings
 map.set("n", "<space>tb", ":Telescope file_browser<CR>", { noremap = true})
