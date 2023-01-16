@@ -12,3 +12,12 @@ vim.g['vim_markdown_json_frontmatter'] = 1
 -- Python settings
 -- Inevitably, the host Python program will need to be changed
 vim.g["python3_host_prog"] = "/home/kinlong/miniconda3/bin/python"
+
+local api = vim.api
+
+api.nvim_create_autocmd(
+    "FileType", {
+        pattern = {"*.yml", "*.yaml"},
+        command = "set local ts=2 sts=2 sw=2 expandtab",
+    }
+)
