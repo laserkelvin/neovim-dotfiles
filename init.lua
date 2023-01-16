@@ -41,6 +41,9 @@ vim.notify = require("notify")
 -- activate lualine
 require("lualine").setup()
 
+-- activate nvim-surround
+require("nvim-surround").setup()
+
 require("config.bindings")
 require("config.languages")
 require("config.theme")

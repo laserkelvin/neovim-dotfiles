@@ -23,6 +23,7 @@ return {
 			indent = { enable = true },
 		},
 	},
+	"nvim-treesitter/nvim-treesitter-textobjects",
 	{"folke/zen-mode.nvim", config = function()
 	    require("zen-mode").setup {}
 	  end
