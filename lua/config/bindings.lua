@@ -26,6 +26,9 @@ map.set("n", "gr", "<Plug>(coc-references)", { silent = true})
 map.set("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true})
 map.set("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true})
 
+-- Zen mode
+map.set("n", "<leader>z", ":ZenMode<CR>", { silent = true})
+
 -- barbar; too lazy to port this to lua lol
 vim.cmd [[
 	nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
