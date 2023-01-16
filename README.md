@@ -75,7 +75,7 @@ is said and done.
 
 ### Bindings
 
-TODO see if we can port this into something more easily searchable.
+Use `<space>tk` to open up the Telescope keymap list.
 
 - `<space>tb` for `:Telescope file_browser`
 - `<space>tf` for `:Telescope frecency`
