@@ -48,4 +48,5 @@ require("config.globals")
 require("config.doge")
 require("config.telescope")
 require("config.autocmd")
+require("config.git")
 
