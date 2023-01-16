@@ -81,3 +81,5 @@ Use `<space>tk` to open up the Telescope keymap list.
 - `<space>tf` for `:Telescope frecency`
 - `<leader>ga` for `:Git add .`
 - `<leader>gc>` for `:Git commit`
+- `<leader>hs` for stage hunk `:Gitsigns stage_hunk<CR>`
+- `<leader>hr` for stage hunk `:Gitsigns reset_hunk<CR>`
