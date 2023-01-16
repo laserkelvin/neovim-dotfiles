@@ -27,5 +27,6 @@ return {
 	    require("zen-mode").setup {}
 	  end
   },
-  "folke/twilight.nvim"
+  "savq/melange-nvim",
+   --"folke/twilight.nvim" might come back to this
 }
