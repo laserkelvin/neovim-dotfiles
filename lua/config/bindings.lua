@@ -30,6 +30,10 @@ map.set("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true})
 -- Zen mode
 map.set("n", "<leader>z", ":ZenMode<CR>", { silent = true})
 
+-- Gitsigns
+map.set({"n", "v"}, "<leader>hs", ":Gitsigns stage_hunk<CR>")
+map.set({"n", "v"}, "<leader>hr", ":Gitsigns reset_hunk<CR>")
+
 -- barbar; too lazy to port this to lua lol
 vim.cmd [[
 	nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
