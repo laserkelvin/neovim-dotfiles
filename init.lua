@@ -47,6 +47,9 @@ require("nvim-surround").setup()
 -- activate leap.nvim
 require("leap").add_default_mappings()
 
+-- activate indent_blankline
+require("indent_blankline").setup({ show_current_context = true })
+
 require("config.bindings")
 require("config.languages")
 require("config.theme")
