@@ -35,6 +35,8 @@ require("lazy").setup(
 		},
 	},
 })
+-- activate notify
+vim.notify = require("notify")
 
 -- activate lualine
 require("lualine").setup()
