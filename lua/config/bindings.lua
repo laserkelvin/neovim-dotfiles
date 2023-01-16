@@ -14,8 +14,8 @@ map.set("n", "<space>tf", ":Telescope frecency<CR>", { noremap = true})
 
 -- Fugitive bindings
 map.set("n", "<leader>gg", ":Git<CR>")
-map.set("n", "<leader>ga", ":Git add .")
-map.set("n", "<leader>gc", ":Git commit") 
+map.set("n", "<leader>ga", ":Git add .<CR>")
+map.set("n", "<leader>gc", ":Git commit<CR>") 
 
 -- Coc bindings
 map.set("n", "gd", "<Plug>(coc-definition)", { silent = true})
