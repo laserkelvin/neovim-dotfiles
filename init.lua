@@ -36,6 +36,9 @@ require("lazy").setup(
 	},
 })
 
+-- activate lualine
+require("lualine").setup()
+
 require("config.bindings")
 require("config.languages")
 require("config.theme")
@@ -43,3 +46,4 @@ require("config.globals")
 require("config.doge")
 require("config.telescope")
 require("config.autocmd")
+
