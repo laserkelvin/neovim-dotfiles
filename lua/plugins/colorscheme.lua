@@ -27,4 +27,5 @@ return {
 	    require("zen-mode").setup {}
 	  end
   },
+  "folke/twilight.nvim"
 }
