@@ -44,6 +44,9 @@ require("lualine").setup()
 -- activate nvim-surround
 require("nvim-surround").setup()
 
+-- activate leap.nvim
+require("leap").add_default_mappings()
+
 require("config.bindings")
 require("config.languages")
 require("config.theme")
