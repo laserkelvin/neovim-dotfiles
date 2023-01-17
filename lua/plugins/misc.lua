@@ -5,5 +5,6 @@ return {
 	{"nvim-lualine/lualine.nvim", options = { icons_enabled = false, theme = "auto"}},
 	{"mhinz/vim-startify", branch = "master"},
 	"tpope/vim-repeat",
-	"ggandor/leap.nvim"
+	"ggandor/leap.nvim",
+	"ahmedkhalf/project.nvim"
 }

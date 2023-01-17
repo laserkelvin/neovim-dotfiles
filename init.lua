@@ -50,6 +50,9 @@ require("leap").add_default_mappings()
 -- activate indent_blankline
 require("indent_blankline").setup({ show_current_context = true })
 
+-- activate project.nvim
+require("project_nvim").setup()
+
 require("config.bindings")
 require("config.languages")
 require("config.theme")
