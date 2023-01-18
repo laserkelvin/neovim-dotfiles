@@ -53,6 +53,9 @@ require("indent_blankline").setup({ show_current_context = true })
 -- activate project.nvim
 require("project_nvim").setup()
 
+-- activate noice
+require("noice").setup()
+
 require("config.bindings")
 require("config.languages")
 require("config.theme")

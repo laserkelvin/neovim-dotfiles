@@ -6,5 +6,7 @@ return {
 	{"mhinz/vim-startify", branch = "master"},
 	"tpope/vim-repeat",
 	"ggandor/leap.nvim",
-	"ahmedkhalf/project.nvim"
-}
+	"ahmedkhalf/project.nvim",
+        "MunifTanjim/nui.nvim",
+        "folke/noice.nvim"
+    }
