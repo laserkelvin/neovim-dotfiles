@@ -38,6 +38,14 @@ require("lazy").setup(
 -- activate notify
 vim.notify = require("notify")
 
+-- configure treesitter
+require("nvim-treesitter.configs").setup({
+    ensure_installed = { 
+	"c", "lua", "python", "markdown", "markdown_inline", "yaml", "json", "vim", "regex", "help", "bash" },
+    sync_installed = false,
+    auto_install = true
+})
+
 -- activate lualine
 require("lualine").setup()
 
@@ -52,6 +60,9 @@ require("indent_blankline").setup({ show_current_context = true })
 
 -- activate project.nvim
 require("project_nvim").setup()
+
+-- activate noice
+require("noice").setup()
 
 require("config.bindings")
 require("config.languages")
