@@ -24,8 +24,8 @@ add it to `PATH`.
 ### Dependencies
 
 - `npm` (see below in `coc.nvim`), and install the following with `npm` too:
-	- `pyright`
-	- `neovim`
+    - `pyright`
+    - `neovim`
 
 Additional PyPI packages which are supported, but generally better left for `pre-commit`
 workflows:
@@ -70,10 +70,10 @@ For additional functionality with `noice`, you'll also need to install some spec
 ### Fugitive
 
 - Get in the habit of using Fugitive for `git` actions:
-	- `:Git` without other commands will open a buffer with modified files
-	- You can cycle through modified files with `(` and `)`
-	- Pressing `=` on a modified file will expand it, showing diffs
-	- Pressing `-` on a diff will add the patch
+    - `:Git` without other commands will open a buffer with modified files
+    - You can cycle through modified files with `(` and `)`
+    - Pressing `=` on a modified file will expand it, showing diffs
+    - Pressing `-` on a diff will add the patch
 
 ### Bindings
 
