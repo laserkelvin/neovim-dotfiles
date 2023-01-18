@@ -17,6 +17,7 @@ map.set("n", "<space>tf", ":Telescope frecency<CR>", { noremap = true})
 map.set("n", "<leader>gg", ":Git<CR>")
 map.set("n", "<leader>ga", ":Git add .<enter>")
 map.set("n", "<leader>gc", ":Git commit<CR>")
+map.set("n", "<leader>gca", ":Git commit --amend<CR>")
 
 -- Coc bindings
 map.set("n", "gd", "<Plug>(coc-definition)", { silent = true})
