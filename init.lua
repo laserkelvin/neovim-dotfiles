@@ -64,6 +64,15 @@ require("project_nvim").setup()
 -- activate noice
 require("noice").setup()
 
+-- activate nvim-tree
+require("nvim-tree").setup(
+    {
+        sort_by = "case_sensitive",
+        view = { adaptive_size = true },
+        filters = { dotfiles = true },
+    }
+)
+
 require("config.bindings")
 require("config.languages")
 require("config.theme")
