@@ -66,6 +66,7 @@ For additional functionality with `noice`, you'll also need to install some spec
 - Close buffers with `:bd`
 - Navigate between buffers with `<A-,>` and `<A-.>` (alt-key)
 - Open Telescope with `<leader>ts` to access various functions
+- Use `leap` to do fast fuzzy search + navigation in a document
 
 ### Fugitive
 
@@ -74,6 +75,16 @@ For additional functionality with `noice`, you'll also need to install some spec
     - You can cycle through modified files with `(` and `)`
     - Pressing `=` on a modified file will expand it, showing diffs
     - Pressing `-` on a diff will add the patch
+
+### Commenting & documentation
+
+- Use `vim-doge` for bulk of docstring generation, particularly for Python (`<leader>d`)
+- Use `NERDComment` for fast, multiline commenting out of blocks (`<leader>c<space>`)
+- Use CoC for a lot of semantic navigation (not sure if that's the phrasing for this)
+    - `gd` for go to definition
+    - `gr` for find references
+    - `gi` for go to implementation
+    - `]g` and `[g` for next CoC diagnostic
 
 ### Bindings
 
