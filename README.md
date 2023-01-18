@@ -24,8 +24,8 @@ add it to `PATH`.
 ### Dependencies
 
 - `npm` (see below in `coc.nvim`), and install the following with `npm` too:
-	- `pyright`
-	- `neovim`
+    - `pyright`
+    - `neovim`
 
 Additional PyPI packages which are supported, but generally better left for `pre-commit`
 workflows:
@@ -66,14 +66,25 @@ For additional functionality with `noice`, you'll also need to install some spec
 - Close buffers with `:bd`
 - Navigate between buffers with `<A-,>` and `<A-.>` (alt-key)
 - Open Telescope with `<leader>ts` to access various functions
+- Use `leap` to do fast fuzzy search + navigation in a document
 
 ### Fugitive
 
 - Get in the habit of using Fugitive for `git` actions:
-	- `:Git` without other commands will open a buffer with modified files
-	- You can cycle through modified files with `(` and `)`
-	- Pressing `=` on a modified file will expand it, showing diffs
-	- Pressing `-` on a diff will add the patch
+    - `:Git` without other commands will open a buffer with modified files
+    - You can cycle through modified files with `(` and `)`
+    - Pressing `=` on a modified file will expand it, showing diffs
+    - Pressing `-` on a diff will add the patch
+
+### Commenting & documentation
+
+- Use `vim-doge` for bulk of docstring generation, particularly for Python (`<leader>d`)
+- Use `NERDComment` for fast, multiline commenting out of blocks (`<leader>c<space>`)
+- Use CoC for a lot of semantic navigation (not sure if that's the phrasing for this)
+    - `gd` for go to definition
+    - `gr` for find references
+    - `gi` for go to implementation
+    - `]g` and `[g` for next CoC diagnostic
 
 ### Bindings
 
@@ -85,3 +96,7 @@ Use `<space>tk` to open up the Telescope keymap list.
 - `<leader>gc>` for `:Git commit`
 - `<leader>hs` for stage hunk `:Gitsigns stage_hunk<CR>`
 - `<leader>hr` for stage hunk `:Gitsigns reset_hunk<CR>`
+- `<leader>tr` for `nvim-tree` toggling
+- Some useful misc bindings:
+    - `<C-x>` will split new buffers horizontally, `<C-v>` vertically
+    - In normal mode, `<C-w>s` will split the pane horizontally, `<C-w>v` vertically.

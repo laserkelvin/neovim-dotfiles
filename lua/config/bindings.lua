@@ -35,6 +35,12 @@ map.set("n", "<leader>z", ":ZenMode<CR>", { silent = true})
 map.set({"n", "v"}, "<leader>hs", ":Gitsigns stage_hunk<CR>")
 map.set({"n", "v"}, "<leader>hr", ":Gitsigns reset_hunk<CR>")
 
+-- Doge comment generation
+map.set("n", "<leader>dg", ":DogeGenerate<CR>", { silent = true, noremap = true })
+
+-- nvim-tree
+map.set("n", "<leader>tr", ":NvimTreeToggle<CR>", { silent = true, noremap = true})
+
 -- barbar; too lazy to port this to lua lol
 vim.cmd [[
 	nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
