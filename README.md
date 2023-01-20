@@ -97,6 +97,8 @@ Use `<space>tk` to open up the Telescope keymap list.
 - `<leader>hs` for stage hunk `:Gitsigns stage_hunk<CR>`
 - `<leader>hr` for stage hunk `:Gitsigns reset_hunk<CR>`
 - `<leader>tr` for `nvim-tree` toggling
+- `<leader>a` for `aerial.nvim`, which shows a sidebar with functions/classes. 
+    - `{` and `}` will navigate between symbols when this sidebar is open.
 - Some useful misc bindings:
     - `<C-x>` will split new buffers horizontally, `<C-v>` vertically
     - In normal mode, `<C-w>s` will split the pane horizontally, `<C-w>v` vertically.
