@@ -8,12 +8,15 @@ is required before these plugins can be used.
 
 The highlights are:
 
-1. `coc-jedi` for autocompletion, with `coc.nvim` as a language server
+1. `coc-pyright` for autocompletion, with `coc.nvim` as a language server
 2. `telescope` for a lot of things
 3. `fugitive` for Git control within Neovim
 4. `barbar` for buffer management
-5. `Goyo` and `Limelight` for distraction-free writing
-
+5. `zenmode` for distraction-free writing
+6. `aerial.nvim` for symbol navigation
+7. `treesitter` for language highlighting, etc.
+8. `NERDComment` for easy line commenting
+9. `vim-doge` for docstring generation
 
 ## Installation
 
