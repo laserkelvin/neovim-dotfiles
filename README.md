@@ -8,12 +8,15 @@ is required before these plugins can be used.
 
 The highlights are:
 
-1. `coc-jedi` for autocompletion, with `coc.nvim` as a language server
+1. `coc-pyright` for autocompletion, with `coc.nvim` as a language server
 2. `telescope` for a lot of things
 3. `fugitive` for Git control within Neovim
 4. `barbar` for buffer management
-5. `Goyo` and `Limelight` for distraction-free writing
-
+5. `zenmode` for distraction-free writing
+6. `aerial.nvim` for symbol navigation
+7. `treesitter` for language highlighting, etc.
+8. `NERDComment` for easy line commenting
+9. `vim-doge` for docstring generation
 
 ## Installation
 
@@ -97,6 +100,10 @@ Use `<space>tk` to open up the Telescope keymap list.
 - `<leader>hs` for stage hunk `:Gitsigns stage_hunk<CR>`
 - `<leader>hr` for stage hunk `:Gitsigns reset_hunk<CR>`
 - `<leader>tr` for `nvim-tree` toggling
+- `ysiw(` will enclose text with a bracket; character can be swapped out for anything
+    - `ysiW(` will also enclose contiuguous characters, i.e. `hello_world`
+- `<leader>a` for `aerial.nvim`, which shows a sidebar with functions/classes. 
+    - `{` and `}` will navigate between symbols when this sidebar is open.
 - Some useful misc bindings:
     - `<C-x>` will split new buffers horizontally, `<C-v>` vertically
     - In normal mode, `<C-w>s` will split the pane horizontally, `<C-w>v` vertically.

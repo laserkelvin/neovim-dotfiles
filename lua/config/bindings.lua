@@ -41,6 +41,9 @@ map.set("n", "<leader>dg", ":DogeGenerate<CR>", { silent = true, noremap = true 
 -- nvim-tree
 map.set("n", "<leader>tr", ":NvimTreeToggle<CR>", { silent = true, noremap = true})
 
+-- aerial.nvim open
+map.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+
 -- barbar; too lazy to port this to lua lol
 vim.cmd [[
 	nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
