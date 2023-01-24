@@ -101,7 +101,7 @@ Use `<space>tk` to open up the Telescope keymap list.
 - `<leader>hr` for stage hunk `:Gitsigns reset_hunk<CR>`
 - `<leader>tr` for `nvim-tree` toggling
 - `ysiw(` will enclose text with a bracket; character can be swapped out for anything
-    - `ysiW(` will also enclose contiuguous characters, i.e. `hello_world`
+- `ysiW(` will also enclose contiuguous characters, i.e. `hello_world`
 - `<leader>a` for `aerial.nvim`, which shows a sidebar with functions/classes. 
     - `{` and `}` will navigate between symbols when this sidebar is open.
 - Some useful misc bindings:

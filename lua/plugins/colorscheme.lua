@@ -29,5 +29,6 @@ return {
       end
   },
   "savq/melange-nvim",
-   --"folke/twilight.nvim" might come back to this
+  "folke/twilight.nvim", -- might come back to this
+  "folke/tokyonight.nvim"
 }
