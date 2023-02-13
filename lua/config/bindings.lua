@@ -12,12 +12,14 @@ map.set("n", "<leader>tk", ":Telescope keymaps<CR>", {})
 -- Telescope extension bindings
 map.set("n", "<space>tb", ":Telescope file_browser<CR>", { noremap = true})
 map.set("n", "<space>tf", ":Telescope frecency<CR>", { noremap = true})
+map.set("n", "<space>tp", ":Telescope projects<CR>", { noremap = true})
 
 -- Fugitive bindings
 map.set("n", "<leader>gg", ":Git<CR>")
 map.set("n", "<leader>ga", ":Git add .<enter>")
 map.set("n", "<leader>gc", ":Git commit<CR>")
 map.set("n", "<leader>gca", ":Git commit --amend<CR>")
+map.set("n", "<leader>gcv", ":Git commit --no-verify<CR>")
 
 -- Coc bindings
 map.set("n", "gd", "<Plug>(coc-definition)", { silent = true})
