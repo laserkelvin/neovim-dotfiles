@@ -81,6 +81,9 @@ require("nvim-tree").setup(
     }
 )
 
+-- activate autopairs
+require("nvim-autopairs").setup {}
+
 require("config.bindings")
 require("config.languages")
 require("config.theme")
