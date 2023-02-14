@@ -2,6 +2,9 @@
 local map = vim.keymap
 local builtin = require("telescope.builtin")
 
+-- General neovim bindings
+map.set("i", "<C-o>", "\n", { silent = true, noremap = true })
+
 -- Telescope bindings
 map.set("n", "<leader>ff", builtin.find_files, {})
 map.set("n", "<leader>fb", builtin.buffers, {})
