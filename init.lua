@@ -82,7 +82,9 @@ require("nvim-tree").setup(
 )
 
 -- activate autopairs
-require("nvim-autopairs").setup {}
+require("nvim-autopairs").setup {
+    enable_check_bracket_line = false
+}
 
 require("config.bindings")
 require("config.languages")
