@@ -23,6 +23,8 @@ map.set("n", "<leader>ga", ":Git add .<enter>")
 map.set("n", "<leader>gc", ":Git commit<CR>")
 map.set("n", "<leader>gca", ":Git commit --amend<CR>")
 map.set("n", "<leader>gcv", ":Git commit --no-verify<CR>")
+map.set("n", "<leader>gcs", ":Git commit -s<CR>")
+map.set("n", "<leader>gcas", ":Git commit -s --amend<CR>")
 
 -- Coc bindings
 map.set("n", "gd", "<Plug>(coc-definition)", { silent = true})
