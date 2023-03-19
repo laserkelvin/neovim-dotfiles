@@ -55,10 +55,13 @@ This will append to `.bashrc`, and so either source or relogin. Afterwards, run 
 to get the latest LTS version of `npm`.
 
 The suite now uses `coc-pyright`; as `lazy.nvim` installs packages it will install `pyright`
-with `npm`. Additionally, run `:CocInstall coc-pyright coc-json coc-yaml coc-vimtex` within neovim after everything else is said and done.
+with `npm`. Additionally, run `:CocInstall coc-pyright coc-json coc-yaml coc-vimtex coc-julia` within neovim after everything else is said and done.
 
 For additional functionality with `noice`, you'll also need to install some specific
-`tree-sitter` parsers: `vim regex lua bash markdown markdown_inline python`.
+`tree-sitter` parsers: `vim regex lua bash markdown markdown_inline python julia`.
+
+Note, for Julia you may have to install a separate set of packages; you will be prompted,
+and it'll be something to the tune of `LanguageServer.jl`.
 
 ## Usage
 
