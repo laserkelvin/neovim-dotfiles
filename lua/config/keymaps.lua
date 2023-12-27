@@ -3,3 +3,4 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<Leader>d", "<cmd>DogeGenerate numpy<cr>")
+vim.keymap.set("n", "<Leader>tk", "<cmd>Telekasten panel<cr>")
