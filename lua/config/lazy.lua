@@ -44,3 +44,7 @@ require("lazy").setup({
     },
   },
 })
+
+require("telekasten").setup({
+  home = vim.fn.expand("~/Documents/zettelkasten"), -- Put the name of your notes directory here
+})
