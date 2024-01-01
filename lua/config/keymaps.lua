@@ -4,3 +4,4 @@
 
 vim.keymap.set("n", "<Leader>d", "<cmd>DogeGenerate numpy<cr>")
 vim.keymap.set("n", "<Leader>tk", "<cmd>Telekasten panel<cr>")
+vim.keymap.set("n", "<Leader>zm", "<cmd>ZenMode<cr>")
