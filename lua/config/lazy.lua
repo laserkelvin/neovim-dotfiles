@@ -45,6 +45,10 @@ require("lazy").setup({
   },
 })
 
+local zettel_home = vim.fn.expand("~/Documents/zettelkasten")
+
 require("telekasten").setup({
-  home = vim.fn.expand("~/Documents/zettelkasten"), -- Put the name of your notes directory here
+  home = zettel_home, -- Put the name of your notes directory here
+  template_new_daily = zettel_home .. "/" .. "templates/daily.md",
+  template_new_weekly = zettel_home .. "/" .. "templates/weekly.md",
 })
