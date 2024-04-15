@@ -6,6 +6,9 @@ return {
     opts = { flavour = "macchiato" },
   },
   {
+    "nyoom-engineering/oxocarbon.nvim",
+  },
+  {
     "rebelot/kanagawa.nvim",
     name = "kanagawa",
   },
