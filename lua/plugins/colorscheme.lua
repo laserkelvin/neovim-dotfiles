@@ -6,9 +6,13 @@ return {
     opts = { flavour = "macchiato" },
   },
   {
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "kanagawa",
     },
   },
 }
