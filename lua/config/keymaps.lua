@@ -10,3 +10,6 @@ vim.keymap.set("n", "<Leader>tn", "<cmd>Telekasten new_note<cr>")
 vim.keymap.set("n", "<Leader>tb", "<cmd>Telekasten show_backlinks<cr>")
 vim.keymap.set("i", "[[", "<cmd>Telekasten insert_link<CR>")
 vim.keymap.set("n", "<Leader>zm", "<cmd>ZenMode<cr>")
+
+-- replaces word under cursor
+vim.keymap.set("n", "<Leader>x", "*``cgn")
