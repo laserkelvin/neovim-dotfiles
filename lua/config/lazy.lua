@@ -54,5 +54,3 @@ require("telekasten").setup({
   template_new_weekly = config_root .. "/" .. "templates/weekly.md",
   templates = config_root .. "/" .. "templates/",
 })
-
-require("nvim-llama").setup({ model = "deepseek-coder:6.7b" })
