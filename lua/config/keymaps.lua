@@ -16,3 +16,6 @@ vim.keymap.set("n", "<Leader>x", "*``cgn")
 
 -- emojis and symbols
 vim.keymap.set("n", "<Leader>em", "<cmd>Telescope symbols<cr>")
+
+-- markdown preview
+vim.keymap.set("n", "<Leader>pr", "<cmd>MarkdownPreview<cr>")
