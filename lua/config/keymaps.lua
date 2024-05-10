@@ -13,3 +13,6 @@ vim.keymap.set("n", "<Leader>zm", "<cmd>ZenMode<cr>")
 
 -- replaces word under cursor
 vim.keymap.set("n", "<Leader>x", "*``cgn")
+
+-- emojis and symbols
+vim.keymap.set("n", "<Leader>em", "<cmd>Telescope symbols<cr>")
