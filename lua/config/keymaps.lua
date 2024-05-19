@@ -20,3 +20,6 @@ vim.keymap.set("n", "<Leader>em", "<cmd>Telescope symbols<cr>")
 
 -- markdown preview
 vim.keymap.set("n", "<Leader>pr", "<cmd>MarkdownPreview<cr>")
+
+-- nerdicons
+vim.keymap.set("n", "<Leader>en", "<cmd>Nerdy<cr>")
