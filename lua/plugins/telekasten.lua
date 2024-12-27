@@ -5,6 +5,7 @@ return {
   {
     "renerocksai/telekasten.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
+    lazy = true,
     config = function()
       require("telekasten").setup({
         home = zettel_home, -- Put the name of your notes directory here
