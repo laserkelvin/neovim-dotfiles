@@ -12,10 +12,12 @@ return {
     "rebelot/kanagawa.nvim",
     name = "kanagawa",
   },
+  { "EdenEast/nightfox.nvim" }, -- lazy
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+    --- This is where it actually gets set!
+      colorscheme = "dayfox",
     },
   },
 }
