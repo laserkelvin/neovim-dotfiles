@@ -158,8 +158,8 @@ require("codecompanion").setup(
                 .. "6. Write the multiline docstring without repeating the code you were provided, incorporating all of the factors"
                 .. " you have considered in the previous steps. You should structure the multiline docstring"
                 .. " like so:\n"
-                .. "<A short summary of the code>\n\n<A long-form description of the code>\n\nParameters\n---------\n\nReturns\n--------\n\n"
-                .. "Raises\n--------\n\nNotes\n---------\n\nExamples\n---------"
+                .. '"""\n<A short summary of the code>\n\n<A long-form description of the code>\n\nParameters\n---------\n\nReturns\n--------\n\n'
+                .. 'Raises\n--------\n\nNotes\n---------\n\nExamples\n---------\n"""'
             end,
           },
           {
