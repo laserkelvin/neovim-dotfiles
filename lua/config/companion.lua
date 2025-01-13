@@ -157,6 +157,80 @@ require("codecompanion").setup(
           },
         },
     },
+      ["Code reasoning"] = {
+        strategy = "workflow",
+        description = "Reason about the code you have been given.",
+        opts = {
+          modes = { "v" },
+          short_name = "code_reason",
+          auto_submit = true,
+          stop_context_insertion = true,
+          user_prompt = true,
+        },
+        prompts = {
+          {
+            {
+              role = config.constants.SYSTEM_ROLE,
+              content = function(context)
+                return "### First step:\n\nYou are a principal engineer with many years developing in the "
+                  .. context.filetype
+                  .. " programming language. You have been given some code to help write documentation for,"
+                  .. " which we will break up the process into two steps. This is the first step, in which you"
+                  .. " will try and infer high-level characteristics about the code, focusing on the following:"
+                  .. " what variables are declared, the names of functions and classes, and any branching/flow"
+                  .. " control structures are present. The six questions you will answer are provided **after** the"
+                  .. " code: your response must follow the same structure as the questions, and you must attempt"
+                  .. " to answer every question. If you are unsure about something, do not make it up and instead"
+                  .. " ask for clarification, or say you do not know."
+              end,
+            },
+            {
+              role = config.constants.USER_ROLE,
+              content = function(context)
+                local text = actions.get_code(context.start_line, context.end_line)
+
+                return "### Code:\n\n```" .. context.filetype .. "\n" .. text .. "\n```\n\n"
+                  .. "### Questions:\n\n"
+                  .. "1. What variables are declared in the code? Variables are generally on the left side of statements with an `=` symbol."
+                  .. " An example of this would be `a = 2 + sin(c)`, where `a` is the variable being declared and implicitly assumes that"
+                  .. " the variable `c` has already been declared.\n"
+                  .. "2. What, if any, flow/branching statements are used in the code? An example of such a statement would be a `for`"
+                  .. " loop, or a conditional block would contain `if` and optionally `else` statements. If there are no such statements,"
+                  .. " say there are none.\n"
+                  .. "3. What, if any, is the name of the functions and/or class in the provided code? If there are no functions or classes"
+                  .. " in the code block, say there are none.\n"
+                  .. "4. If there are functions, what, if anything, are the arguments and keyword arguments that are accepted? List them"
+                  .. " out by their name(s). If there are neither arguments nor keyword arguments, or there are no functions, say there are none.\n"
+                  .. "5. If there are functions, what, if anything, is/are being returned by each function? Are they variables, or are they literals?"
+                  .. " If a function ends without a return statement, say that the corresponding function returns none.\n"
+                  .. "6. Reabstract or transcribe the provided code into pseudocode that distills the core algorithm and logic."
+              end,
+              opts = {
+                contains_code = true,
+                ignore_system_prompt = true,
+                }
+              }
+            },
+          {
+            {
+              role = config.constants.USER_ROLE,
+              content = function(context)
+                return "From your answers above, describe at a high-level what the code does."
+                .. " You must use simple language to do so, and be as comprehensive as possible."
+                .. " Try and make educated inferences on how the code should be used, and identify"
+                .. " areas where you could improve it from usability, readability, and computational"
+                .. " performance standpoints. If you are unclear about any aspect of the code, you"
+                .. " must **now** ask for clarification."
+              end,
+              opts = {
+                contains_code = true,
+                auto_submit = true,
+                ignore_system_prompt = true,
+              }
+            }
+          },
+        }
+      },
   },
   }
 )
