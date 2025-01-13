@@ -183,7 +183,7 @@ require("codecompanion").setup(
         description = "Multi-step workflow for generating unit tests with PyTest.",
         opts = {
           modes = { "v" },
-          short_name = "code_reason",
+          short_name = "pytest",
           auto_submit = true,
           stop_context_insertion = true,
           user_prompt = true,
