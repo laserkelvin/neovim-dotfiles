@@ -156,7 +156,7 @@ require("codecompanion").setup(
             }
           },
         },
-    },
+      },
       ["Code reasoning"] = {
         strategy = "workflow",
         description = "Reason about the code you have been given.",
@@ -231,7 +231,7 @@ require("codecompanion").setup(
           },
         }
       },
-  },
+    },
   }
 )
 
