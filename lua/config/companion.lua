@@ -125,9 +125,9 @@ require("codecompanion").setup(
           }
         }
       },
-      ["Python docstring"] = {
+      ["NumPy docstring"] = {
         strategy = "chat",
-        description = "Generate a NumPy style docstring for this function.",
+        description = "Generate a docstring in NumPy style for this function.",
         opts = {
           modes = { "v" },
           short_name = "docstring",
@@ -139,17 +139,38 @@ require("codecompanion").setup(
           {
             role = "system",
             content = function(context)
-              return "I want you to act as a senior "
-                .. context.filetype
-                .. " developer, who has extensive experience in writing concise yet descriptive documentation. You are asked to provide a NumPy style docstring for the code provided, detailing the type hints if provided and reasoning about what the function does step-by-step."
+              return "You are a senior Python developer with extensive experience working with"
+                .. " numerical computing libraries such as NumPy, Dask, PyTorch. You have been"
+                .. " provided some code to provide documentation for, in the official style"
+                .. " for the NumPy library. To do so, you should think through how the code"
+                .. " works, step-by-step; if you are unclear about anything, you must ask for clarification."
+                .. " To help you with task, here is a sequence of things to do:\n"
+                .. "1. Use the name of the function or class to infer the purpose of the function:"
+                .. " how it's expected to be used, and under what kind of contexts.\n"
+                .. "2. If there are arguments in the function or class, infer the purpose of each"
+                .. "argument or keyword argument. Consider type annotations/hints if they have been provided.\n"
+                .. "3. If there are return arguments in the function or class, infer the purpose"
+                .. "each return argument and types if they have been provided.\n"
+                .. "4. Build a mental model of branching/flow control within the code: work through"
+                .. "each line of code, step-by-step, and anticipate how it may behave.\n"
+                .. "5. If there are any exceptions that can be raised during code execution, make note"
+                .. " of what kind of exception is being raised, and how they might be triggered.\n"
+                .. "6. Write the multiline docstring without repeating the code you were provided, incorporating all of the factors"
+                .. " you have considered in the previous steps. You should structure the multiline docstring"
+                .. " like so:\n"
+                .. "<A short summary of the code>\n\n<A long-form description of the code>\n\nParameters\n---------\n\nReturns\n--------\n\n"
+                .. "Raises\n--------\n\nNotes\n---------\n\nExamples\n---------"
             end,
           },
           {
             role = "user",
             content = function(context)
-              local text = require("codecompanion.helpers.actions").get_code(context.start_line, context.end_line)
+              local text = actions.get_code(context.start_line, context.end_line)
 
-              return "I have the following code:\n\n```" .. context.filetype .. "\n" .. text .. "\n```\n\n"
+              return "This is the Python code you are asked to document:\n\n"
+                .. "```python"
+                .. text
+                .. "```\n"
             end,
             opts = {
               contains_code = true,
