@@ -33,3 +33,6 @@ vim.api.nvim_set_keymap("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap =
 
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])
+
+-- docstrings with Neogen
+vim.keymap.set("n", "<Leader>nc", "<cmd>Neogen<cr>")
