@@ -30,11 +30,11 @@ return {
           codecompanion = {
             name = "CodeCompanion",
             module = "codecompanion.providers.completion.blink",
-            enabled = true
-          }
-        }
-      }
-    }
+            enabled = true,
+          },
+        },
+      },
+    },
   },
   {
     "stevearc/oil.nvim",
@@ -43,7 +43,7 @@ return {
     opts = {},
     dependencies = {
       { "echasnovski/mini.icons", opts = {} },
-    }
+    },
   },
   {
     "folke/flash.nvim",
@@ -61,14 +61,16 @@ return {
   },
   {
     "danymat/neogen",
-    config = function ()
+    config = function()
       require("neogen").setup({
         languages = {
           python = {
-            template = { annotation_convention = "numpydoc" }
-          }
-        }
+            template = { annotation_convention = "numpydoc" },
+          },
+        },
       })
-    end
-  }
+    end,
+  },
+  { "mason-org/mason.nvim", version = "^1.0.0" },
+  { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
 }
