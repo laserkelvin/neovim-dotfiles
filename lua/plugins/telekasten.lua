@@ -5,6 +5,7 @@ return {
   {
     "renerocksai/telekasten.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
+    enabled = false,
     lazy = true,
     config = function()
       require("telekasten").setup({
@@ -17,5 +18,6 @@ return {
   },
   {
     "renerocksai/calendar-vim",
+    enabled = false
   },
 }
