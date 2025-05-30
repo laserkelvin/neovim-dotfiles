@@ -9,6 +9,14 @@ return {
     "nyoom-engineering/oxocarbon.nvim",
   },
   {
+    "rose-pine/neovim",
+    name = "rose-pine",
+  },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    priority = 1000,
+  },
+  {
     "rebelot/kanagawa.nvim",
     name = "kanagawa",
   },
@@ -17,7 +25,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
     --- This is where it actually gets set!
-      colorscheme = "dayfox",
+      colorscheme = "rose-pine",
     },
   },
 }
