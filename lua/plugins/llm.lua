@@ -5,12 +5,13 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
+    cmd = { "CodeCompanion", "CodeCompanionChat", "CodeCompanionActions" },
     opts = {
       interactions = {
         chat = {
           adapter = {
             name = "ollama",
-            model = "gemma3:4b-it-qat",
+            model = "ministral-3:8b",
           },
         },
       },
@@ -22,7 +23,11 @@ return {
         },
       },
     },
-    lazy = false,
-    keys = {},
+  },
+  {
+    "Davidyz/VectorCode",
+    version = "*",
+    build = "uv tool install vectorcode && uv tool install upgrade vectorcode",
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
 }
